@@ -30,3 +30,12 @@ jason = {
   current_salary: 0.00,
   languages: %w[C++ Python]
 }
+
+candidates = [jane, sara, jason]
+
+def average_age(people)
+  people.map { |who| who[:age] }
+        .reduce(0) { |acc, cur| acc + cur } / people.length.to_f
+end
+
+puts average_age(candidates)
