@@ -39,3 +39,11 @@ def average_age(people)
 end
 
 puts average_age(candidates)
+
+def language_screening(people, language)
+  people.select { |who| who[:languages].include? language }
+end
+
+puts language_screening(candidates, 'Python')
+puts language_screening(candidates, 'Go')
+puts language_screening(candidates, 'JavaScript')
